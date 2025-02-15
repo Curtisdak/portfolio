@@ -4,8 +4,11 @@ import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ImSpinner3 } from "react-icons/im";
 
 const Contact = () => {
+
+  const [isLoading, setIsLoading]= useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +23,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setIsLoading(true)
+
+    setTimeout(()=>{
 
     emailjs
       .send(
@@ -38,8 +45,10 @@ const Contact = () => {
           toast.error("An error occurred, please try again");
         }
       );
+      setIsLoading(false)
+    },2000)
 
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", message: "" });  
   };
 
   return (
@@ -71,7 +80,7 @@ const Contact = () => {
             rows={4}
             required
           />
-          <button type="submit">Send</button>
+          <button type="submit" disabled={isLoading} > {isLoading? <span className="downlaoding"><ImSpinner3 className="spinner" /> Sending </span> :"Send"} </button>
         </form>
       </div>
     </div>
