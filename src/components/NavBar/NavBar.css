@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95vw;
+    width: 100%;
     animation: TOPtoB 1s ease-in-out alternate forwards;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -37,8 +37,9 @@
 #navBar .text-logo {
     animation: moveLogo 2s ease-in-out alternate-reverse forwards infinite;
     font-size: 1rem;
-    /* padding: 10px 20px; */
-    cursor: pointer,
+    padding-left: 20px;
+    cursor: pointer;
+    color: #fff;
 }
 
 #navBar h2 {
