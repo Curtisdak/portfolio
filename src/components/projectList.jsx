@@ -54,7 +54,7 @@ export const projects = [
  {
     id: 5,
     name: "Gems",
-    detail: "I'm currently working on this projects, is a platform where rich people can securely sell and buy jewelries . This projects improves my Backend/Frontend skills ",
+    detail: "This projects, is a platform where rich people can securely sell and buy jewelries . This projects improves my Backend/Frontend skills ",
     techno: ["html", "css", "javascript", "react.js", "sql", "mysql", "node.js", "express.js", "Harmonia (framework)", "postman", "workbench"],
     pictures: [gems01,gems02],
     discover: "https://gems-gems.fr/",
